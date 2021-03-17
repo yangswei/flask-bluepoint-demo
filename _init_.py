@@ -1,5 +1,5 @@
 from flask import Flask
-from flaskdemo.bluepoint import bp as alertding_bp
+from flaskdemo.bluepoint import bp as demobp
 from db import db
 from rds import redis_client, redis_client2,  redis_client3
 from flaskdemo.tasks import autotask
@@ -21,7 +21,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['pool_pre_ping'] = True
 
 scheduler = APScheduler()
-app.register_blueprint(alertding_bp)
+app.register_blueprint(demobp)
 
 with app.app_context():
     db.init_app(app)

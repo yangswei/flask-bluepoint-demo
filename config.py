@@ -9,7 +9,7 @@ class DevConfig():
   REDIS_URL = "redis://:xx@127.0.0.1/0"
   REDIS2_URL = "redis://:xx@127.0.0.1/1"
   REDIS3_URL = "redis://:xx@127.0.0.1/2"
-  SQLALCHEMY_DATABASE_URI = "sqlite:///db/alertcloud.db"
+  SQLALCHEMY_DATABASE_URI = "sqlite:///db/sqlitlocal.db"
 
 class ProductConfig():
   ENV='production'
